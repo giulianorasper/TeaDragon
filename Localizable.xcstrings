@@ -1,0 +1,381 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld / %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld / %2$lld"
+          }
+        }
+      }
+    },
+    "%lld brews" : {
+
+    },
+    "%lld. Steep" : {
+
+    },
+    "1. Data Controller" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. Verantwortlicher"
+          }
+        }
+      }
+    },
+    "2. Data Processing in the App" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. Datenverarbeitung in der App"
+          }
+        }
+      }
+    },
+    "3. Data Sharing" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. Datenweitergabe"
+          }
+        }
+      }
+    },
+    "4. Legal Basis for Data Processing" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. Rechtsgrundlage der Datenverarbeitung"
+          }
+        }
+      }
+    },
+    "5. Your Rights" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5. Ihre Rechte"
+          }
+        }
+      }
+    },
+    "6. Data Security" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6. Datensicherheit"
+          }
+        }
+      }
+    },
+    "7. Changes to the Privacy Policy" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7. Änderungen der Datenschutzrichtlinie"
+          }
+        }
+      }
+    },
+    "250" : {
+
+    },
+    "a. Tea Configurations\nThe \"Tea Dragon\" app allows you to save tea configurations (such as types of tea, steeping times, temperatures) locally on your device. These data are stored offline and remain on your device. There is no transmission, processing, or storage of these data on external servers or by us as the app provider.\n\nb. Crash Reports\nIn the event of crashes or technical issues, automatically generated crash reports may be sent from your device to Apple. These reports may include information such as device type, operating system version, and app state at the time of the crash. These data are processed by Apple and are subject to their privacy policy.\n[More information: Apple Privacy Policy](https://www.apple.com/privacy/)" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "a. Tee-Konfigurationen\nDie App \\\"Tea Dragon\\\" ermöglicht es Ihnen, Tee-Konfigurationen (wie Teesorten, Ziehzeiten, Temperaturen) lokal auf Ihrem Gerät zu speichern. Diese Daten werden ausschließlich offline gespeichert und verbleiben auf Ihrem Gerät. Es erfolgt keine Übertragung, Verarbeitung oder Speicherung dieser Daten auf externen Servern oder durch uns als Anbieter.\n\nb. Crash-Reports\nIm Falle von Abstürzen oder technischen Problemen kann es sein, dass automatisch generierte Fehlerberichte (Crash Reports) von Ihrem Gerät an Apple gesendet werden. Diese Berichte enthalten möglicherweise Informationen wie Geräte-Typ, Betriebssystemversion und App-Zustand zum Zeitpunkt des Absturzes. Diese Daten werden von Apple verarbeitet und unterliegen deren Datenschutzrichtlinien."
+          }
+        }
+      }
+    },
+    "Add" : {
+
+    },
+    "Add Cup" : {
+
+    },
+    "Aimer" : {
+
+    },
+    "Brew Progress" : {
+
+    },
+    "Cancel" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
+        }
+      }
+    },
+    "Cup" : {
+
+    },
+    "Cup Name" : {
+
+    },
+    "Cup Shelf" : {
+
+    },
+    "cup to show intructions for" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "Done" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
+          }
+        }
+      }
+    },
+    "Edit" : {
+
+    },
+    "Edit Tea" : {
+
+    },
+    "Effective: January 2025" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stand: Januar 2025"
+          }
+        }
+      }
+    },
+    "Grandma's Cup" : {
+
+    },
+    "Hengstwaldstraße 125 \n66346 Püttlingen \nGermany" : {
+
+    },
+    "If you have any further questions about data protection in the \"Tea Dragon\" app, please contact us at the email address provided above.\n\nThank you for trusting our app!" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Falls Sie weitere Fragen zum Datenschutz in der App \\\"Tea Dragon\\\" haben, kontaktieren Sie uns bitte unter der oben angegebenen E-Mail-Adresse.\n                \nVielen Dank für Ihr Vertrauen in unsere App!"
+          }
+        }
+      }
+    },
+    "Imprint" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impressum"
+          }
+        }
+      }
+    },
+    "Legal Information" : {
+
+    },
+    "Medium Cup" : {
+
+    },
+    "ml" : {
+
+    },
+    "New Tea" : {
+
+    },
+    "Privacy Policy" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenschutzrichtlinie"
+          }
+        }
+      }
+    },
+    "Privacy Policy for the \"Tea Dragon\" App" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenschutzrichtlinie für die App \\\"Tea Dragon\\\""
+          }
+        }
+      }
+    },
+    "Recommendation" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おすすめ"
+          }
+        }
+      }
+    },
+    "Sencha" : {
+      "comment" : "Name of the tea: Sencha",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "煎茶"
+          }
+        }
+      }
+    },
+    "Settings" : {
+
+    },
+    "Spoons" : {
+
+    },
+    "Steep Settings" : {
+
+    },
+    "Steeps" : {
+
+    },
+    "Tea Dragon" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ティードラゴン"
+          }
+        }
+      }
+    },
+    "Tea Name" : {
+
+    },
+    "Tea Type" : {
+
+    },
+    "Teas" : {
+
+    },
+    "Temperature" : {
+
+    },
+    "The data controller as defined by the GDPR for the processing of personal data is:\n\n%@\nEmail: %@" : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Verantwortliche im Sinne der DSGVO für die Verarbeitung personenbezogener Daten ist:\n\n%1$@\nE-Mail: %2$@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The data controller as defined by the GDPR for the processing of personal data is:\n\n%1$@\nEmail: %2$@"
+          }
+        }
+      }
+    },
+    "The storage of tea configurations is carried out exclusively on your device and does not require consent under the GDPR, as no personal data are processed. Crash reports are processed under Article 6(1)(f) GDPR, as they are necessary for error analysis and app improvement." : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Speicherung von Tee-Konfigurationen erfolgt ausschließlich lokal auf Ihrem Gerät und benötigt keine Einwilligung gemäß DSGVO, da keine personenbezogenen Daten verarbeitet werden. Crash Reports werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet, da sie für die Fehleranalyse und Verbesserung der App erforderlich sind."
+          }
+        }
+      }
+    },
+    "Under the GDPR, you have the right to:\n- Access information about the data stored about you (Article 15 GDPR),\n- Rectify inaccurate data (Article 16 GDPR),\n- Erase your data (Article 17 GDPR),\n- Restrict processing (Article 18 GDPR),\n- Object to data processing (Article 21 GDPR).\n\nSince the app does not store personal data, these rights are generally not applicable. However, if you have questions regarding your rights, feel free to contact us." : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im Rahmen der DSGVO haben Sie das Recht auf:\n- Auskunft über die von Ihnen gespeicherten Daten (Art. 15 DSGVO),\n- Berichtigung unrichtiger Daten (Art. 16 DSGVO),\n- Löschung Ihrer Daten (Art. 17 DSGVO),\n- Einschränkung der Verarbeitung (Art. 18 DSGVO),\n- Widerspruch gegen die Datenverarbeitung (Art. 21 DSGVO).\n\nDa die App keine personenbezogenen Daten speichert, sind diese Rechte in der Regel nicht relevant. Bei Fragen zu Ihren Rechten können Sie uns dennoch gerne kontaktieren."
+          }
+        }
+      }
+    },
+    "We implement technical and organizational measures to ensure the security of the app and your locally stored data. Nevertheless, we recommend regularly backing up your data and ensuring that your devices are protected by passwords or other security mechanisms." : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wir setzen technische und organisatorische Maßnahmen ein, um die Sicherheit der App und Ihrer lokal gespeicherten Daten zu gewährleisten. Dennoch empfehlen wir, regelmäßig Sicherungen Ihrer Daten durchzuführen und darauf zu achten, dass Ihre Geräte durch Passwörter oder andere Sicherheitsmechanismen geschützt sind."
+          }
+        }
+      }
+    },
+    "We reserve the right to adjust this privacy policy in the event of changes to the app or applicable legal requirements. The current version can be found in the app settings." : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wir behalten uns das Recht vor, diese Datenschutzrichtlinie bei Änderungen der App oder der geltenden gesetzlichen Anforderungen anzupassen. Die jeweils aktuelle Version finden Sie in den Einstellungen der App."
+          }
+        }
+      }
+    },
+    "We Two" : {
+
+    },
+    "Your data is not shared with third parties by us as the app provider. All data stored locally remains exclusively on your device." : {
+      "comment" : "legal text",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es erfolgt keine Weitergabe Ihrer Daten an Dritte durch uns als Anbieter der App. Sämtliche lokal gespeicherten Daten verbleiben ausschließlich auf Ihrem Gerät."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

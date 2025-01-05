@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct Tea_DragonApp: App {
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            TeaDragonView()
         }
     }
 }
+

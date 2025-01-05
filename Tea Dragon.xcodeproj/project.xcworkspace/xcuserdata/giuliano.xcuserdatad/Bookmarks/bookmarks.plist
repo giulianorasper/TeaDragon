@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>35</string>
+					<key>EndingLineNumber</key>
+					<string>29</string>
+					<key>StartingColumnNumber</key>
+					<string>31</string>
+					<key>StartingLineNumber</key>
+					<string>29</string>
+					<key>Timestamp</key>
+					<string>757670083.480386</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Tea Dragon/BrewEditView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>TODO</string>
+				<key>leading</key>
+				<string>                    ToolbarItem(placement: .confirmationAction) {
+                        Button() {
+                            // </string>
+				<key>trailing</key>
+				<string>: Are there other similar data validations neccesary? Move code to other location?
+                            editedBrew.currentBrew = min(editedBrew.currentBrew, editedBrew.brewTimes.count)
+                            brew = editedBrew
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>13</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>12</string>
+					<key>Timestamp</key>
+					<string>757749458.723075</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Tea Dragon/Models/TeaAmbientPlayer.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>// TODO: Disable ambient music if another sound source is playing
+</string>
+				<key>leading</key>
+				<string>import UserNotifications
+
+</string>
+				<key>trailing</key>
+				<string>
+class TeaAmbientPlayer {
+    
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>35</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>34</string>
+					<key>Timestamp</key>
+					<string>757767004.3149821</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Tea Dragon/TeaBrewView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                    // TODO: dont hardcode this
+</string>
+				<key>leading</key>
+				<string>                        }
+                    Spacer()
+</string>
+				<key>trailing</key>
+				<string>                    Text(brew.teaName)
+                        .font(.title)
+                        .padding(.bottom, -5)
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>44</string>
+					<key>EndingLineNumber</key>
+					<string>11</string>
+					<key>StartingColumnNumber</key>
+					<string>40</string>
+					<key>StartingLineNumber</key>
+					<string>11</string>
+					<key>Timestamp</key>
+					<string>757811936.236876</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Tea Dragon/Views/TeaConfig/Cup/EditCupsView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>when</string>
+				<key>leading</key>
+				<string>    @EnvironmentObject var cupStore: CupStore
+    @Environment(\.dismiss) var dismiss
+    // TODO: Figure out why this breaks </string>
+				<key>trailing</key>
+				<string> using cup instances and directly modifying the Volumes millilitre attribute
+//    @State private var newCup: Cup = Cup()
+    @State private var cupName: String = ""
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>
