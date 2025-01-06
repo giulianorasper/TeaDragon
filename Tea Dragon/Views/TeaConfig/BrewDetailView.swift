@@ -44,7 +44,7 @@ struct BrewDetailView: View {
                 }
                 
                 Section(header: Text("Infusision Times")) {
-                    ForEach(Array(brew.brewTimes.enumerated()), id: \.1) { index, time in
+                    ForEach(Array(brew.brewTimes.enumerated()), id: \.0) { index, time in
                         TimerPicker(number: index + 1, selectedTime: $brew.brewTimes[index])
                     }
                             .onDelete { indices in

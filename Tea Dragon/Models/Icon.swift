@@ -11,7 +11,7 @@ enum Icon {
     static let temperature = "thermometer.medium"
     static let cup = "cup.and.saucer.fill"
     static let cupWarm = "cup.and.heat.waves.fill"
-    static let spoons = "scalemass.fill"
+    static let spoons = "leaf.fill"
     static let steep = "alarm.fill"
     static let time = "hourglass.start"
     static let brewAmount = "repeat"

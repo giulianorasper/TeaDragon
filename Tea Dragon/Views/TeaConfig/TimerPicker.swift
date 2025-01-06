@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct TimerPicker: View {
-    
-    var number: Int
+    let number: Int
     @Binding var selectedTime: TimePeriod
     @State var showPopover: Bool = false
     
