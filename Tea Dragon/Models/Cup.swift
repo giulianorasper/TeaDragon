@@ -7,9 +7,9 @@
 import Foundation
 
 struct Cup: Identifiable, Hashable, Codable {
-    var id: UUID
-    var name: String
-    var volume: Volume
+    private var _id: UUID
+    private var _name: String
+    private var _volume: Volume
     
     var info: String {
         if volume.formatted() == "0ml" {
@@ -20,9 +20,9 @@ struct Cup: Identifiable, Hashable, Codable {
     }
     
     init(id: UUID = UUID(), name: String = "", volume: Volume = .init(millilitres: 250)) {
-        self.id = id
-        self.name = name
-        self.volume = volume
+        self._id = id
+        self._name = name
+        self._volume = volume
     }
     
     func copy() -> Cup {
@@ -38,6 +38,33 @@ struct Cup: Identifiable, Hashable, Codable {
     }
     
     var isValid: Bool { !name.isEmpty && volume.millilitres > 0}
+    
+    var id: UUID {
+        get {
+            return _id
+        }
+        set {
+            _id = newValue
+        }
+    }
+    
+    var name: String {
+        get {
+            return _name
+        }
+        set {
+            _name = newValue
+        }
+    }
+    
+    var volume: Volume {
+        get {
+            return _volume
+        }
+        set {
+            _volume = newValue
+        }
+    }
     
 }
 

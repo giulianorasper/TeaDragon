@@ -6,7 +6,16 @@
 //
 
 struct Temperature: Hashable, Codable {
-    var celsius: Double
+    private var _celsius: Double
+    
+    var celsius: Double {
+        get { _celsius }
+        set { _celsius = newValue }
+    }
+    
+    init(celsius: Double) {
+        self._celsius = celsius
+    }
     
     var text: String {
         set {

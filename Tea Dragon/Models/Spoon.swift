@@ -7,7 +7,17 @@
 import Foundation
 
 struct Spoon: Hashable, Codable {
-    var amount: Double
+    private var _amount: Double
+    
+    var amount: Double {
+        get { _amount }
+        set { _amount = newValue }
+    }
+    
+    init(amount: Double) {
+        self._amount = amount
+    }
+    
     
     func formatted() -> String {
         guard amount > 0.0 else { return "0 spoons" }

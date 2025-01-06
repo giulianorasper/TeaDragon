@@ -1,36 +1,27 @@
 import Foundation
 
 struct Brew: Identifiable, Codable {
-    let id: UUID
-    var teaName: String
-    var temperature: Temperature
-    var brewTimes: [TimePeriod]
-    var spoons: Spoon
-    var cup: Cup
-    var _currentBrew: Int
-    var theme: Theme
+    private let _id: UUID
+    private var _teaName: String
+    private var _temperature: Temperature
+    private var _brewTimes: [TimePeriod]
+    private var _spoons: Spoon
+    private var _cup: Cup
+    private var _currentBrew: Int
+    private var _theme: Theme
     
     var brewAmount: Int {
         brewTimes.count
     }
     
-    var currentBrew: Int {
-        get {
-            return min(_currentBrew, brewAmount)
-        }
-        set {
-            _currentBrew = (newValue-1) % brewAmount + 1
-        }
-    }
-    
     init(id: UUID = UUID(), teaName: String = "", temperature: Temperature = Temperature(celsius: 70.0), brewTimes: [TimePeriod] = [TimePeriod(minutes: 2, seconds: 0)], spoons: Spoon = Spoon(amount: 1), cup: Cup = Cup.smallCup, theme: Theme = .greenTea) {
-        self.id = id
-        self.teaName = teaName
-        self.temperature = temperature
-        self.brewTimes = brewTimes
-        self.spoons = spoons
-        self.cup = cup
-        self.theme = theme
+        self._id = id
+        self._teaName = teaName
+        self._temperature = temperature
+        self._brewTimes = brewTimes
+        self._spoons = spoons
+        self._cup = cup
+        self._theme = theme
         self._currentBrew = 1
     }
     
@@ -50,6 +41,75 @@ struct Brew: Identifiable, Codable {
         currentBrew < brewTimes.count
     }
     
+    
+    var id: UUID {
+        get {
+            return _id
+        }
+    }
+    
+    var teaName: String {
+        get {
+            return _teaName
+        }
+        set {
+            _teaName = newValue
+        }
+    }
+    
+    var temperature: Temperature {
+        get {
+            return _temperature
+        }
+        set {
+            _temperature = newValue
+        }
+    }
+    
+    var brewTimes: [TimePeriod] {
+        get {
+            return _brewTimes
+        }
+        set {
+            _brewTimes = newValue
+        }
+    }
+    
+    var spoons: Spoon {
+        get {
+            return _spoons
+        }
+        set {
+            _spoons = newValue
+        }
+    }
+    
+    var cup: Cup {
+        get {
+            return _cup
+        }
+        set {
+            _cup = newValue
+        }
+    }
+    
+    var currentBrew: Int {
+        get {
+            return _currentBrew
+        }
+        set {
+            _currentBrew = newValue
+        }
+    }
+    
+    var theme: Theme {
+        get {
+            return _theme
+        }
+        set {
+            _theme = newValue
+        }
+    }
 }
 
 
