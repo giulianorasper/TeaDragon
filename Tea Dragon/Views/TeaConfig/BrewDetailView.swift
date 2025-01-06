@@ -43,7 +43,7 @@ struct BrewDetailView: View {
                     }
                 }
                 
-                Section(header: Text("Infusision Times")) {
+                Section(header: Text("Infusion Times")) {
                     ForEach(Array(brew.brewTimes.enumerated()), id: \.0) { index, time in
                         TimerPicker(number: index + 1, selectedTime: $brew.brewTimes[index])
                     }

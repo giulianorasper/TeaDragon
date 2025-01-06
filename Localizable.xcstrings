@@ -7,6 +7,24 @@
     "%.0f teaspoons" : {
       "comment" : "The amount of teaspoons",
       "localizations" : {
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%.0f Teelöffel"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%.0f Teelöffel"
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "variations" : {
             "plural" : {
@@ -42,6 +60,24 @@
     "%.1f teaspoons" : {
       "comment" : "The amount of teaspoons",
       "localizations" : {
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%.0f Teelöffel"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%.0f Teelöffel"
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "variations" : {
             "plural" : {
@@ -93,16 +129,64 @@
     },
     "%lld steeps" : {
       "localizations" : {
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Aufguss"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Aufgüsse"
+                }
+              }
+            }
+          }
+        },
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld steep"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "%lld steeps"
+                }
+              }
+            }
+          }
+        },
         "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld煎"
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld煎"
+                }
+              }
+            }
           }
         }
       }
     },
     "%lld. Steep" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld. Aufguss"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -212,6 +296,12 @@
     },
     "Add" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hinzufügen"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -225,6 +315,12 @@
     },
     "Cancel" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -235,6 +331,12 @@
     },
     "Cup" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tasse"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -245,6 +347,12 @@
     },
     "Cup Name" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tassenname"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -255,6 +363,12 @@
     },
     "Cup Shelf" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tassenregal"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -265,16 +379,34 @@
     },
     "cup to show intructions for" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tasse für die Teezubereitung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "cup for making tea"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "表示対象のカップ"
+            "value" : "お茶を淹れるためのカップ"
           }
         }
       }
     },
     "Delete" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -285,6 +417,12 @@
     },
     "Done" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fertig"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -295,6 +433,12 @@
     },
     "Edit" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bearbeiten"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -305,6 +449,12 @@
     },
     "Edit Tea" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tee Bearbeiten"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -327,6 +477,12 @@
     },
     "Grandma's Cup" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omas Tasse"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -367,8 +523,14 @@
         }
       }
     },
-    "Infusision Times" : {
+    "Infusion Times" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziehzeiten"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -382,6 +544,12 @@
     },
     "Medium Cup" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mittelgroße Tasse"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -392,6 +560,12 @@
     },
     "ml" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ml"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -402,6 +576,12 @@
     },
     "New Tea" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tee Hinzufügen"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -441,6 +621,12 @@
     },
     "Recommendation" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empfehlung"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -452,6 +638,12 @@
     "Sencha" : {
       "comment" : "Name of the tea: Sencha",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sencha"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -462,6 +654,12 @@
     },
     "Settings" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -472,6 +670,12 @@
     },
     "Small Cup" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleine Tasse"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -482,6 +686,12 @@
     },
     "Steep Progress" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziehfortschritt"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -492,6 +702,12 @@
     },
     "Steep Settings" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zieheinstellungen"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -502,6 +718,12 @@
     },
     "Tea Dragon" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tea Dragon"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -512,6 +734,12 @@
     },
     "Tea Name" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teename"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -522,6 +750,12 @@
     },
     "Tea Quantity" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teemenge"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -532,6 +766,12 @@
     },
     "Tea Type" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teeart"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -542,6 +782,12 @@
     },
     "Teas" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tees"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -552,6 +798,12 @@
     },
     "Temperature" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temperatur"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
