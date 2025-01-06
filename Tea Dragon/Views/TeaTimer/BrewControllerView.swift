@@ -16,7 +16,7 @@ struct BrewControllerView : View {
     var body: some View {
         let subtitle = Label("\(brew.currentBrew) / \(brew.brewTimes.count)", systemImage: Icon.brewAmount)
             .labelStyle(.trailingIcon)
-        InteractiveProgressBar(title: Text("Brew Progress"), subtitle: subtitle, currentTime: $teaTimer.timeElapsed, totalTime: teaTimer.totalTime, hasPrevious: brew.hasPreviousBrew, isPlaying: $teaTimer.isRunning, hasNext: brew.hasNextBrew, previousAction: previousAction, nextAction: nextAction, playAction: playAction, pauseAction: pauseAction)
+        InteractiveProgressBar(title: Text("Steep Progress"), subtitle: subtitle, currentTime: $teaTimer.timeElapsed, totalTime: teaTimer.totalTime, hasPrevious: brew.hasPreviousBrew, isPlaying: $teaTimer.isRunning, hasNext: brew.hasNextBrew, previousAction: previousAction, nextAction: nextAction, playAction: playAction, pauseAction: pauseAction)
             .onAppear {
                 teaTimer.reset(timePeriod: brew.brewTimes[brew.currentBrew-1])
                 teaTimer.timerEndedAction = {

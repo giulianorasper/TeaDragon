@@ -37,7 +37,7 @@ struct CupPicker: View {
                     
                 }
                 Button(action: { showAddCupDialog.toggle() }) {
-                    Text("Add Cup")
+                    Label("Cup Shelf", systemImage: "pencil")
                 }
             }
             .foregroundStyle(style)

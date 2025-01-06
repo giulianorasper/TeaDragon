@@ -4,25 +4,22 @@
 //
 //  Created by Giuliano Rasper on 27.12.24.
 //
+import Foundation
 
 struct Spoon: Hashable, Codable {
     var amount: Double
     
     func formatted() -> String {
         guard amount > 0.0 else { return "0 spoons" }
-        let whole_spoons = Int(amount)
-        let remainder = amount - Double(whole_spoons)
-        
-        if whole_spoons == 0 {
-            return "1/2 spoons"
+        let formattedAmount: String
+        if amount.truncatingRemainder(dividingBy: 1) == 0 {
+            // No fractional part, format as an integer
+            formattedAmount = String(format: NSLocalizedString("%.0f teaspoons", comment: "The amount of teaspoons"), amount)
+        } else {
+            // Fractional part exists, format with one decimal place
+            formattedAmount = String(format: NSLocalizedString("%.1f teaspoons", comment: "The amount of teaspoons"), amount)
         }
-        if amount == 1.0 {
-            return "1 spoon"
-        }
-        if remainder > 0.0 {
-            return "\(whole_spoons) 1/2 spoons"
-        }
-        return "\(whole_spoons) spoons"
+        return formattedAmount
     }
     
     func hash(into hasher: inout Hasher) {

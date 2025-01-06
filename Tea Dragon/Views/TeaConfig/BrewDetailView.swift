@@ -38,12 +38,12 @@ struct BrewDetailView: View {
                     }
                     
                     HStack {
-                        Label("Spoons", systemImage: Icon.spoons)
+                        Label("Tea Quantity", systemImage: Icon.spoons)
                         SpoonPicker(selection: $brew.spoons)
                     }
                 }
                 
-                Section(header: Text("Steeps")) {
+                Section(header: Text("Infusision Times")) {
                     ForEach(Array(brew.brewTimes.enumerated()), id: \.1) { index, time in
                         TimerPicker(number: index + 1, selectedTime: $brew.brewTimes[index])
                     }

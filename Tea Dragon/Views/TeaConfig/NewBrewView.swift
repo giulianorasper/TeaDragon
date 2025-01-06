@@ -19,7 +19,7 @@ struct NewBrewView: View {
             BrewDetailView(brew: $brew)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
-                        Button("Dismiss") {
+                        Button("Cancel") {
                             show = false
                         }
                     }

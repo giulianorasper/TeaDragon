@@ -42,7 +42,7 @@ struct Cup: Identifiable, Hashable, Codable {
 }
 
 extension Cup {
-    static let smallCup: Cup = .init(name: "Small Cup", volume: Volume(millilitres: 200))
+    static let smallCup: Cup = .init(name: NSLocalizedString("Small Cup", comment: ""), volume: Volume(millilitres: 200))
     
     static let sampleData: [Cup] = [
         smallCup,

@@ -14,7 +14,7 @@ struct CardView : View {
                 Text(brew.teaName)
                     .font(.title)
                 Label("\(brew.temperature.formatted())", systemImage: Icon.temperature)
-                Label("\(brew.brewTimes.count) brews", systemImage: Icon.brewAmount)
+                Label("\(brew.brewTimes.count) steeps", systemImage: Icon.brewAmount)
                 withAnimation {
                     Label("\(usedCup.info)", systemImage: Icon.cup)
                 }
