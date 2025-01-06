@@ -42,20 +42,21 @@ enum Theme: String, CaseIterable, Identifiable, Codable {
     
     var name: String {
         switch self {
-        case .greenTea: return "Green Tea"
-        case .blackTea: return "Black Tea"
-        case .whiteTea: return "White Tea"
-        case .oolongTea: return "Oolong Tea"
-        case .herbalTea: return "Herbal Tea"
-        case .fruitTea: return "Fruit Tea"
-        case .matchaTea: return "Matcha Tea"
-        case .puerhTea: return "Pu-erh Tea"
-        case .yellowTea: return "Yellow Tea"
-        case .chaiTea: return "Chai Tea"
-        case .rooibosTea: return "Rooibos Tea"
-        case .other: return "Other"
+        case .greenTea: return NSLocalizedString("Green Tea", comment: "")
+        case .blackTea: return NSLocalizedString("Black Tea", comment: "")
+        case .whiteTea: return NSLocalizedString("White Tea", comment: "")
+        case .oolongTea: return NSLocalizedString("Oolong Tea", comment: "")
+        case .herbalTea: return NSLocalizedString("Herbal Tea", comment: "")
+        case .fruitTea: return NSLocalizedString("Fruit Tea", comment: "")
+        case .matchaTea: return NSLocalizedString("Matcha Tea", comment: "")
+        case .puerhTea: return NSLocalizedString("Pu-erh Tea", comment: "")
+        case .yellowTea: return NSLocalizedString("Yellow Tea", comment: "")
+        case .chaiTea: return NSLocalizedString("Chai Tea", comment: "")
+        case .rooibosTea: return NSLocalizedString("Rooibos Tea", comment: "")
+        case .other: return NSLocalizedString("Other", comment: "")
         }
     }
+
     
     var id: String { name }
 }

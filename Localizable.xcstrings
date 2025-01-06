@@ -313,6 +313,22 @@
     "Aimer" : {
       "shouldTranslate" : false
     },
+    "Black Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwarzer Tee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紅茶"
+          }
+        }
+      }
+    },
     "Cancel" : {
       "localizations" : {
         "de" : {
@@ -325,6 +341,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "キャンセル"
+          }
+        }
+      }
+    },
+    "Chai Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chai-Tee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チャイティー"
           }
         }
       }
@@ -475,6 +507,22 @@
       },
       "shouldTranslate" : false
     },
+    "Fruit Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Früchtetee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フルーツティー"
+          }
+        }
+      }
+    },
     "Grandma's Cup" : {
       "localizations" : {
         "de" : {
@@ -491,8 +539,40 @@
         }
       }
     },
+    "Green Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grüner Tee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "緑茶"
+          }
+        }
+      }
+    },
     "Hengstwaldstraße 125 \n66346 Püttlingen \nGermany" : {
       "shouldTranslate" : false
+    },
+    "Herbal Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kräutertee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ハーブティー"
+          }
+        }
+      }
     },
     "If you have any further questions about data protection in the \"Tea Dragon\" app, please contact us at the email address provided above.\n\nThank you for trusting our app!" : {
       "comment" : "legal text",
@@ -542,6 +622,22 @@
     "Legal Information" : {
       "shouldTranslate" : false
     },
+    "Matcha Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matcha-Tee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "抹茶"
+          }
+        }
+      }
+    },
     "Medium Cup" : {
       "localizations" : {
         "de" : {
@@ -590,6 +686,38 @@
         }
       }
     },
+    "Oolong Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oolong-Tee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "烏龍茶"
+          }
+        }
+      }
+    },
+    "Other" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Andere"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その他"
+          }
+        }
+      }
+    },
     "Privacy Policy" : {
       "comment" : "legal text",
       "localizations" : {
@@ -619,6 +747,22 @@
       },
       "shouldTranslate" : false
     },
+    "Pu-erh Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pu-erh-Tee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プーアル茶ちゃ"
+          }
+        }
+      }
+    },
     "Recommendation" : {
       "localizations" : {
         "de" : {
@@ -631,6 +775,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "おすすめ"
+          }
+        }
+      }
+    },
+    "Rooibos Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rooibos-Tee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルイボスティー"
           }
         }
       }
@@ -880,6 +1040,38 @@
     },
     "We Two" : {
       "shouldTranslate" : false
+    },
+    "White Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weißer Tee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "白茶"
+          }
+        }
+      }
+    },
+    "Yellow Tea" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelber Tee"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黄茶"
+          }
+        }
+      }
     },
     "Your data is not shared with third parties by us as the app provider. All data stored locally remains exclusively on your device." : {
       "comment" : "legal text",
