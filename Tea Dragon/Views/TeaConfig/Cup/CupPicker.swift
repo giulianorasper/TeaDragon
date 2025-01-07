@@ -47,7 +47,7 @@ struct CupPicker: View {
                 .font(.footnote)
         }
         .fullScreenCover(isPresented: $showAddCupDialog) {
-            EditCupsView()
+            CupEditView()
         }
         .menuOrder(.fixed)
     }

@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct TeaListView: View {
-    @EnvironmentObject var brewStore: BrewStore
+    @EnvironmentObject var brewStore: TeaStore
     @State var presentAddBrew: Bool = false
     @State var editedBrewIndex: Int = 0
     @State var presentEditBrew: Bool = false
-    @State var timedBrew: Brew = Brew()
+    @State var timedBrew: Tea = Tea()
     @State var presentTimedBrew: Bool = false
     @State var presentNewBrew: Bool = false
     @State var selectedCup: Cup = Cup.automaticCup
@@ -36,7 +36,7 @@ struct TeaListView: View {
                             timedBrew = brew
                             presentTimedBrew = true
                         }) {
-                            CardView(brew: $brew, selectedCup: $selectedCup)
+                            TeaCardView(brew: $brew, selectedCup: $selectedCup)
                                 .chevronNavigation()
                         }
                         .listRowBackground(brew.theme.mainColor)
@@ -90,11 +90,11 @@ struct TeaListView: View {
             
         }
         .fullScreenCover(isPresented: $presentAddBrew) {
-            NewBrewView(show: $presentAddBrew)
+            TeaAddView(show: $presentAddBrew)
         }
         .fullScreenCover(isPresented: $presentEditBrew) {
             NavigationStack {
-                BrewEditView(show: $presentEditBrew, brew: $brewStore.brews[editedBrewIndex])
+                TeaEditView(show: $presentEditBrew, brew: $brewStore.brews[editedBrewIndex])
             }
         }
         .fullScreenCover(isPresented: $presentTimedBrew) {
@@ -117,7 +117,7 @@ struct TeaListView: View {
 }
 
 #Preview("Tea Themes") {
-    let brewStore: BrewStore = BrewStore()
+    let brewStore: TeaStore = TeaStore()
     TeaListView().inject(brewStore: brewStore)
         .onAppear {
             brewStore.loadColoredBrews()

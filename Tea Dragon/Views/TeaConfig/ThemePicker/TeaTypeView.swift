@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ThemeView: View {
-    let theme: Theme
+struct TeaTypeView: View {
+    let theme: TeaType
     
     var body: some View {
         Text(theme.name)
@@ -21,6 +21,6 @@ struct ThemeView: View {
 
 struct ThemeView_Previews: PreviewProvider {
     static var previews: some View {
-        ThemeView(theme: .greenTea)
+        TeaTypeView(theme: .greenTea)
     }
 }

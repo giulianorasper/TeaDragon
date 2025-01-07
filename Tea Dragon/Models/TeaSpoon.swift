@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Spoon: Hashable, Codable {
+struct TeaSpoon: Hashable, Codable {
     private var _amount: Double
     
     var amount: Double {
@@ -36,8 +36,8 @@ struct Spoon: Hashable, Codable {
         hasher.combine(amount)
     }
     
-    func adaptToCup(originalCup: Cup, newCup: Cup) -> Spoon {
+    func adaptToCup(originalCup: Cup, newCup: Cup) -> TeaSpoon {
         let adaptionFactor: Double = Double(newCup.volume.millilitres) / Double(originalCup.volume.millilitres)
-        return Spoon(amount: self.amount * adaptionFactor)
+        return TeaSpoon(amount: self.amount * adaptionFactor)
     }
 }

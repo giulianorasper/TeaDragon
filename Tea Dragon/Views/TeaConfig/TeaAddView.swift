@@ -6,17 +6,17 @@
 //
 import SwiftUI
 
-struct NewBrewView: View {
+struct TeaAddView: View {
     
     @Binding var show: Bool
     @EnvironmentObject var cupStore: CupStore
-    @State var brew: Brew = Brew()
-    @EnvironmentObject var brewStore: BrewStore
+    @State var brew: Tea = Tea()
+    @EnvironmentObject var brewStore: TeaStore
     
     
     var body: some View {
         NavigationStack {
-            BrewDetailView(brew: $brew)
+            TeaDetailView(brew: $brew)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button("Cancel") {

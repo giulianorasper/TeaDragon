@@ -1,20 +1,20 @@
 import Foundation
 
-struct Brew: Identifiable, Codable {
+struct Tea: Identifiable, Codable {
     private let _id: UUID
     private var _teaName: String
     private var _temperature: Temperature
     private var _brewTimes: [TimePeriod]
-    private var _spoons: Spoon
+    private var _spoons: TeaSpoon
     private var _cup: Cup
     private var _currentBrew: Int
-    private var _theme: Theme
+    private var _theme: TeaType
     
     var brewAmount: Int {
         brewTimes.count
     }
     
-    init(id: UUID = UUID(), teaName: String = "", temperature: Temperature = Temperature(celsius: 70.0), brewTimes: [TimePeriod] = [TimePeriod(minutes: 2, seconds: 0)], spoons: Spoon = Spoon(amount: 1), cup: Cup = Cup.smallCup, theme: Theme = .greenTea) {
+    init(id: UUID = UUID(), teaName: String = "", temperature: Temperature = Temperature(celsius: 70.0), brewTimes: [TimePeriod] = [TimePeriod(minutes: 2, seconds: 0)], spoons: TeaSpoon = TeaSpoon(amount: 1), cup: Cup = Cup.smallCup, theme: TeaType = .greenTea) {
         self._id = id
         self._teaName = teaName
         self._temperature = temperature
@@ -75,7 +75,7 @@ struct Brew: Identifiable, Codable {
         }
     }
     
-    var spoons: Spoon {
+    var spoons: TeaSpoon {
         get {
             return _spoons
         }
@@ -102,7 +102,7 @@ struct Brew: Identifiable, Codable {
         }
     }
     
-    var theme: Theme {
+    var theme: TeaType {
         get {
             return _theme
         }
@@ -113,30 +113,30 @@ struct Brew: Identifiable, Codable {
 }
 
 
-extension Brew {
-    static let sampleData: [Brew] =
+extension Tea {
+    static let sampleData: [Tea] =
     [
-        Brew(teaName: "Sencha",
+        Tea(teaName: "Sencha",
              temperature: Temperature(celsius: 70.0),
              brewTimes: [TimePeriod(minutes: 0, seconds: 10), TimePeriod(minutes: 0, seconds: 15)],
-             spoons: Spoon(amount: 1.0),
+             spoons: TeaSpoon(amount: 1.0),
              cup: Cup.smallCup,
              theme: .greenTea
             ),
-        Brew(teaName: "Jasmine",
+        Tea(teaName: "Jasmine",
              temperature: Temperature(celsius: 70.0),
              theme: .greenTea),
-        Brew(teaName: "Dragon Fruit",
+        Tea(teaName: "Dragon Fruit",
              temperature: Temperature(celsius: 100.0),
              theme: .fruitTea),
     ]
     
-    static let defaultData: [Brew] =
+    static let defaultData: [Tea] =
     [
-        Brew(teaName: NSLocalizedString("Sencha", comment: "Name of the tea: Sencha"),
+        Tea(teaName: NSLocalizedString("Sencha", comment: "Name of the tea: Sencha"),
              temperature: Temperature(celsius: 70.0),
              brewTimes: [TimePeriod(minutes: 1, seconds: 0), TimePeriod(minutes: 1, seconds: 30), TimePeriod(minutes: 2, seconds: 0)],
-             spoons: Spoon(amount: 1.0),
+             spoons: TeaSpoon(amount: 1.0),
              cup: Cup.smallCup,
              theme: .greenTea
             ),

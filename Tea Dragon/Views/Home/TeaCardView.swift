@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct CardView : View {
-    @Binding var brew: Brew
+struct TeaCardView : View {
+    @Binding var brew: Tea
     @Binding var selectedCup: Cup
     
     var body: some View {
@@ -27,5 +27,5 @@ struct CardView : View {
 }
 
 #Preview {
-    CardView(brew: .constant(Brew.sampleData[0]), selectedCup: .constant(Brew.sampleData[0].cup))
+    TeaCardView(brew: .constant(Tea.sampleData[0]), selectedCup: .constant(Tea.sampleData[0].cup))
 }

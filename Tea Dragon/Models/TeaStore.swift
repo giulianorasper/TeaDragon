@@ -8,13 +8,13 @@
 import Foundation
 
 @MainActor
-class BrewStore: Observable, ObservableObject {
-    @Published var brews: [Brew] = Brew.sampleData
+class TeaStore: Observable, ObservableObject {
+    @Published var brews: [Tea] = Tea.sampleData
     
     func loadColoredBrews() {
         self.brews.removeAll()
-        for theme in Theme.allCases {
-            let brew: Brew = Brew(teaName: theme.name, theme: theme)
+        for theme in TeaType.allCases {
+            let brew: Tea = Tea(teaName: theme.name, theme: theme)
             self.brews.append(brew)
         }
     }
@@ -28,13 +28,13 @@ class BrewStore: Observable, ObservableObject {
     }
     
     func load() async throws {
-        let task = Task<[Brew], Error> {
+        let task = Task<[Tea], Error> {
             let fileURL = try Self.fileURL()
             guard let data = try? Data(contentsOf: fileURL) else {
                 print("Could not load tea store, loading default")
-                return Brew.defaultData
+                return Tea.defaultData
             }
-            let brews = try JSONDecoder().decode([Brew].self, from: data)
+            let brews = try JSONDecoder().decode([Tea].self, from: data)
             return brews
         }
         let brews = try await task.value
@@ -42,7 +42,7 @@ class BrewStore: Observable, ObservableObject {
         self.brews = brews
     }
     
-    func save(brews: [Brew]) async throws {
+    func save(brews: [Tea]) async throws {
         let task = Task {
             let data = try JSONEncoder().encode(brews)
             let outfile = try Self.fileURL()

@@ -9,13 +9,13 @@ import SwiftUI
 // Wrapper view to handle injection
 @MainActor
 struct InjectedView<Content: View>: View {
-    @StateObject private var brewStore: BrewStore
+    @StateObject private var brewStore: TeaStore
     @StateObject private var cupStore: CupStore
 
     let content: Content
 
-    init(content: Content, brewStore: BrewStore? = nil, cupStore: CupStore? = nil) {
-        _brewStore = StateObject(wrappedValue: brewStore ?? BrewStore())
+    init(content: Content, brewStore: TeaStore? = nil, cupStore: CupStore? = nil) {
+        _brewStore = StateObject(wrappedValue: brewStore ?? TeaStore())
         _cupStore = StateObject(wrappedValue: cupStore ?? CupStore())
         self.content = content
     }
@@ -30,7 +30,7 @@ struct InjectedView<Content: View>: View {
 
 // Extension to inject dependencies
 extension View {
-    func inject(load: Bool = false, brewStore: BrewStore? = nil, cupStore: CupStore? = nil) -> some View {
+    func inject(load: Bool = false, brewStore: TeaStore? = nil, cupStore: CupStore? = nil) -> some View {
         InjectedView(content: self, brewStore: brewStore, cupStore: cupStore)
             .task {
                 if load {

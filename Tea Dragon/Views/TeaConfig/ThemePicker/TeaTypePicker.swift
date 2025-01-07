@@ -1,5 +1,5 @@
 //
-//  TeaTypeSelector.swift
+//  TeaTypePicker.swift
 //  Tea Dragon
 //
 //  Created by Giuliano Rasper on 30.12.24.
@@ -7,13 +7,13 @@
  
 import SwiftUI
 
-struct ThemePicker: View {
-    @Binding var selection: Theme
+struct TeaTypePicker: View {
+    @Binding var selection: TeaType
     
     var body: some View {
         Picker(selection: $selection, label: EmptyView()) {
-            ForEach(Theme.allCases) { theme in
-                ThemeView(theme: theme)
+            ForEach(TeaType.allCases) { theme in
+                TeaTypeView(theme: theme)
                     .tag(theme)
             }
         }
@@ -24,5 +24,5 @@ struct ThemePicker: View {
 
 
 #Preview {
-    ThemePicker(selection: .constant(.greenTea))
+    TeaTypePicker(selection: .constant(.greenTea))
 }

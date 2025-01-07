@@ -6,8 +6,8 @@
 //
 import SwiftUI
 
-struct BrewDetailView: View {
-    @Binding var brew: Brew
+struct TeaDetailView: View {
+    @Binding var brew: Tea
     @State private var selectedTime = Date()
     
     
@@ -23,7 +23,7 @@ struct BrewDetailView: View {
                     }
                     HStack {
                         Label("Tea Type", systemImage: Icon.teaType)
-                        ThemePicker(selection: $brew.theme)
+                        TeaTypePicker(selection: $brew.theme)
     
                     }
                     HStack {
@@ -67,6 +67,6 @@ struct BrewDetailView: View {
 
 #Preview {
     NavigationStack {
-        BrewDetailView(brew: .constant(Brew.sampleData[0])).inject()
+        TeaDetailView(brew: .constant(Tea.sampleData[0])).inject()
     }
 }

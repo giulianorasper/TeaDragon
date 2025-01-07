@@ -9,7 +9,7 @@ import AVFoundation
 
 struct TeaBrewView: View {
     @Binding var show: Bool
-    @Binding var brew: Brew
+    @Binding var brew: Tea
     @State private var isBrewDone: Bool = false
     
     
@@ -58,7 +58,7 @@ struct TeaBrewView: View {
                     Spacer()
 //                    Spacer()
                     
-                    BrewControllerView(brew: $brew)
+                    BrewProgressControllerView(brew: $brew)
                     
                     
                 }
@@ -84,6 +84,6 @@ struct TeaBrewView: View {
 }
 
 #Preview {
-    @Previewable @State var brew: Brew = Brew.sampleData[0]
+    @Previewable @State var brew: Tea = Tea.sampleData[0]
     TeaBrewView(show: .constant(true), brew: $brew)
 }

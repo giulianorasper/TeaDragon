@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct EditCupsView: View {
+struct CupEditView: View {
     @EnvironmentObject var cupStore: CupStore
     @Environment(\.dismiss) var dismiss
     // TODO: Figure out why this breaks when using cup instances and directly modifying the Volumes millilitre attribute
@@ -75,5 +75,5 @@ struct EditCupsView: View {
 }
 
 #Preview {
-    EditCupsView().inject()
+    CupEditView().inject()
 }

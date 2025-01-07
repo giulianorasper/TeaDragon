@@ -60,9 +60,7 @@ class TeaAmbientPlayer {
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
-//        content.title = "Alarm"
         content.body = "Your tea is ready! Enjoy!"
-//        content.sound = UNNotificationSound(named: UNNotificationSoundName("gong.mp3"))
         
         // Schedule the notification to trigger immediately
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)

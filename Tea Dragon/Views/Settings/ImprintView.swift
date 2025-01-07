@@ -1,5 +1,5 @@
 //
-//  Imprint.swift
+//  ImprintView.swift
 //  Tea Dragon
 //
 //  Created by Giuliano Rasper on 05.01.25.

@@ -1,22 +1,22 @@
 //
-//  NewBrewView.swift
+//  TeaEditView.swift
 //  Tea Dragon
 //
 //  Created by Giuliano Rasper on 28.12.24.
 //
 import SwiftUI
 
-struct BrewEditView: View {
+struct TeaEditView: View {
     
     @Binding var show: Bool
-    @Binding var brew: Brew
-    @State var editedBrew: Brew = Brew()
-    @EnvironmentObject var brewStore: BrewStore
+    @Binding var brew: Tea
+    @State var editedBrew: Tea = Tea()
+    @EnvironmentObject var brewStore: TeaStore
     
     
     var body: some View {
         NavigationStack {
-            BrewDetailView(brew: $editedBrew)
+            TeaDetailView(brew: $editedBrew)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button(role: .cancel) {

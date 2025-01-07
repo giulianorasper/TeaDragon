@@ -7,9 +7,9 @@
 import SwiftUI
 import AVFoundation
 
-struct BrewControllerView : View {
+struct BrewProgressControllerView : View {
     @StateObject var teaTimer: TeaTimer = .init()
-    @Binding var brew: Brew
+    @Binding var brew: Tea
     let teaPlayer: TeaAmbientPlayer = TeaAmbientPlayer.shared
     let dingPlayer: AVPlayer = AVPlayer.sharedDingPlayer
     
@@ -55,6 +55,6 @@ struct BrewControllerView : View {
 }
 
 #Preview {
-    @Previewable @State var brew = Brew.defaultData[0]
-    BrewControllerView(brew: $brew)
+    @Previewable @State var brew = Tea.defaultData[0]
+    BrewProgressControllerView(brew: $brew)
 }

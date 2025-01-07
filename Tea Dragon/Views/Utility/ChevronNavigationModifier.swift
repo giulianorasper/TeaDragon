@@ -1,5 +1,5 @@
 //
-//  Untitled.swift
+//  ChevronNavigationModifier.swift
 //  Tea Dragon
 //
 //  Created by Giuliano Rasper on 30.12.24.

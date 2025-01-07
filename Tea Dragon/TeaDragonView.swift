@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TeaDragonView: View {
     
-    let brewStore: BrewStore = BrewStore()
+    let brewStore: TeaStore = TeaStore()
     let cupStore: CupStore = CupStore()
     
     var body: some View {
