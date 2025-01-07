@@ -10,6 +10,7 @@ import AVFoundation
 struct BrewProgressControllerView : View {
     @StateObject var teaTimer: TeaTimer = .init()
     @Binding var brew: Tea
+    @EnvironmentObject var dataStore: DataStore
     let teaPlayer: TeaAmbientPlayer = TeaAmbientPlayer.shared
     
     var body: some View {
@@ -34,13 +35,21 @@ struct BrewProgressControllerView : View {
                 teaPlayer.playAlarm()
                 
             }
+            updateMuteState()
         }
         .onChange(of: brew.currentBrew) { oldValue, newValue in
             teaTimer.reset(timePeriod: brew.brewTimes[brew.currentBrew-1])
         }
+        .onChange(of: dataStore.settings) { oldValue, newValue in
+            updateMuteState()
+        }
         .onDisappear {
             pauseAction()
         }
+    }
+    
+    func updateMuteState() {
+        teaPlayer.setMuted(dataStore.settings.mutePlayback)
     }
     
     func previousAction() {

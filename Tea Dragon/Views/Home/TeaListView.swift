@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TeaListView: View {
-    @EnvironmentObject var brewStore: TeaStore
+    @EnvironmentObject var brewStore: DataStore
     @State var presentAddBrew: Bool = false
     @State var editedBrewIndex: Int = 0
     @State var presentEditBrew: Bool = false
@@ -115,9 +115,9 @@ struct TeaListView: View {
 }
 
 #Preview("Tea Themes") {
-    let brewStore: TeaStore = TeaStore()
-    TeaListView().inject(brewStore: brewStore)
+    let dataStore: DataStore = DataStore()
+    TeaListView().inject(dataStore: dataStore)
         .onAppear {
-            brewStore.loadColoredBrews()
+            dataStore.loadColoredBrews()
         }
 }

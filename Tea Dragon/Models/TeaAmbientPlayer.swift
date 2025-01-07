@@ -14,11 +14,13 @@ import UserNotifications
 
 class TeaAmbientPlayer {
     
+    
     static let shared = TeaAmbientPlayer() // Singleton instance
     
     let ambientPlayer: AVQueuePlayer
     let playerLooper: AVPlayerLooper
     let alarmPlayer: AVPlayer
+    
     
     private init() {
         do {
@@ -72,5 +74,9 @@ class TeaAmbientPlayer {
                 print("Error scheduling notification: \(error)")
             }
         }
+    }
+    
+    func setMuted(_ muted: Bool) {
+        self.ambientPlayer.isMuted = muted
     }
 }

@@ -11,10 +11,10 @@ struct TeaBrewView: View {
     @Binding var show: Bool
     @Binding var brew: Tea
     @State private var isBrewDone: Bool = false
+    @EnvironmentObject var dataStore: DataStore
     
     
     var body: some View {
-        
         NavigationStack {
             GeometryReader { geometry in
                 let sideLength = min(geometry.size.width, geometry.size.height)
@@ -52,6 +52,20 @@ struct TeaBrewView: View {
                                 
                             } else {
                                 Image(systemName: "xmark")
+                            }
+                        }
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            dataStore.settings.mutePlayback = !dataStore.settings.mutePlayback
+                        }) {
+                            withAnimation {
+                                if dataStore.settings.mutePlayback {
+                                    Image(systemName: "speaker.slash.fill")
+                                }
+                                else {
+                                    Image(systemName: "speaker.wave.3.fill")
+                                }
                             }
                         }
                     }

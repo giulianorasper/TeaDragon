@@ -11,7 +11,7 @@ struct TeaEditView: View {
     @Binding var show: Bool
     @Binding var brew: Tea
     @State var editedBrew: Tea = Tea()
-    @EnvironmentObject var brewStore: TeaStore
+    @EnvironmentObject var brewStore: DataStore
     
     
     var body: some View {

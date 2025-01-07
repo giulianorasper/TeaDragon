@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct CupEditView: View {
-    @EnvironmentObject var cupStore: CupStore
+    @EnvironmentObject var cupStore: DataStore
     @Environment(\.dismiss) var dismiss
     // TODO: Figure out why this breaks when using cup instances and directly modifying the Volumes millilitre attribute
     //    @State private var newCup: Cup = Cup()

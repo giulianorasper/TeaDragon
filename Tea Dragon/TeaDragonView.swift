@@ -9,27 +9,20 @@ import SwiftUI
 
 struct TeaDragonView: View {
     
-    let brewStore: TeaStore = TeaStore()
-    let cupStore: CupStore = CupStore()
+    let dataStore: DataStore = DataStore()
     
     var body: some View {
         TeaListView(saveAction: {
             Task {
                 print("Save action triggered:")
                 do {
-                    try await brewStore.save(brews: brewStore.brews)
+                    try await dataStore.save()
                     print("- persisted tea store")
                 } catch {
-                    print("Error saving brews: \(error)")
-                }
-                do {
-                    try await cupStore.save(cups: cupStore.cups)
-                    print("- persisted cup store")
-                } catch {
-                    print("Error saving cups: \(error)")
+                    print("Error saving data store: \(error)")
                 }
             }
-        }).inject(load: true, brewStore: brewStore, cupStore: cupStore)
+        }).inject(load: true, dataStore: dataStore)
             .task {
                 do {
                     let center = UNUserNotificationCenter.current()

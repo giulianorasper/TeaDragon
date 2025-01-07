@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CupPicker: View {
     @Binding var selection: Cup
-    @EnvironmentObject var cupStore: CupStore
+    @EnvironmentObject var cupStore: DataStore
     @State private var showAddCupDialog = false
     var allowAutomaticSelection: Bool = false
     
@@ -51,7 +51,7 @@ struct CupPicker: View {
 
 struct CupPicker_Previews: PreviewProvider {
     static var previews: some View {
-        @StateObject var cupStore: CupStore = CupStore()
+        @StateObject var cupStore: DataStore = DataStore()
         CupPicker(selection: .constant(Cup.sampleData[0]))
             .environment(cupStore)
     }

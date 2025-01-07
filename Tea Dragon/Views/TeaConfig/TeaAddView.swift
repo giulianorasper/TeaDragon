@@ -9,9 +9,9 @@ import SwiftUI
 struct TeaAddView: View {
     
     @Binding var show: Bool
-    @EnvironmentObject var cupStore: CupStore
+    @EnvironmentObject var cupStore: DataStore
     @State var brew: Tea = Tea()
-    @EnvironmentObject var brewStore: TeaStore
+    @EnvironmentObject var brewStore: DataStore
     
     
     var body: some View {
