@@ -37,6 +37,33 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6129195A2D2D0E72006D2094 /* Exceptions for "images" folder in "Tea Dragon" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				1.jpeg,
+				2.jpeg,
+				3.jpeg,
+			);
+			target = 61ACAB3E2D0359FD00992844 /* Tea Dragon */;
+		};
+		6129195B2D2D0E72006D2094 /* Exceptions for "images" folder in "Tea DragonTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				1.jpeg,
+				2.jpeg,
+				3.jpeg,
+			);
+			target = 61ACAB4E2D0359FE00992844 /* Tea DragonTests */;
+		};
+		6129195C2D2D0E72006D2094 /* Exceptions for "images" folder in "Tea DragonUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				1.jpeg,
+				2.jpeg,
+				3.jpeg,
+			);
+			target = 61ACAB582D0359FE00992844 /* Tea DragonUITests */;
+		};
 		61CFD29A2D2A19B600E00C08 /* Exceptions for "Tea Dragon" folder in "Tea DragonTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -56,6 +83,16 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		612919562D2D0D7A006D2094 /* images */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6129195A2D2D0E72006D2094 /* Exceptions for "images" folder in "Tea Dragon" target */,
+				6129195B2D2D0E72006D2094 /* Exceptions for "images" folder in "Tea DragonTests" target */,
+				6129195C2D2D0E72006D2094 /* Exceptions for "images" folder in "Tea DragonUITests" target */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		61ACAB412D0359FD00992844 /* Tea Dragon */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -105,6 +142,7 @@
 		61ACAB362D0359FD00992844 = {
 			isa = PBXGroup;
 			children = (
+				612919562D2D0D7A006D2094 /* images */,
 				61FB4B352D27D286006BE5EA /* Localizable.xcstrings */,
 				61ACAB412D0359FD00992844 /* Tea Dragon */,
 				61ACAB522D0359FE00992844 /* Tea DragonTests */,
@@ -139,6 +177,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				612919562D2D0D7A006D2094 /* images */,
 				61ACAB412D0359FD00992844 /* Tea Dragon */,
 			);
 			name = "Tea Dragon";
@@ -162,6 +201,7 @@
 				61ACAB512D0359FE00992844 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				612919562D2D0D7A006D2094 /* images */,
 				61ACAB522D0359FE00992844 /* Tea DragonTests */,
 			);
 			name = "Tea DragonTests";
@@ -185,6 +225,7 @@
 				61ACAB5B2D0359FE00992844 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				612919562D2D0D7A006D2094 /* images */,
 				61ACAB5C2D0359FE00992844 /* Tea DragonUITests */,
 			);
 			name = "Tea DragonUITests";
