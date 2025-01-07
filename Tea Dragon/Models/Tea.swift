@@ -117,28 +117,28 @@ extension Tea {
     static let sampleData: [Tea] =
     [
         Tea(teaName: "Sencha",
-             temperature: Temperature(celsius: 70.0),
-             brewTimes: [TimePeriod(minutes: 0, seconds: 10), TimePeriod(minutes: 0, seconds: 15)],
-             spoons: TeaSpoon(amount: 1.0),
-             cup: Cup.smallCup,
-             theme: .greenTea
-            ),
+            temperature: Temperature(celsius: 70.0),
+            brewTimes: [TimePeriod(minutes: 0, seconds: 10), TimePeriod(minutes: 0, seconds: 15)],
+            spoons: TeaSpoon(amount: 1.0),
+            cup: Cup.smallCup,
+            theme: .greenTea
+           ),
         Tea(teaName: "Jasmine",
-             temperature: Temperature(celsius: 70.0),
-             theme: .greenTea),
+            temperature: Temperature(celsius: 70.0),
+            theme: .greenTea),
         Tea(teaName: "Dragon Fruit",
-             temperature: Temperature(celsius: 100.0),
-             theme: .fruitTea),
+            temperature: Temperature(celsius: 100.0),
+            theme: .fruitTea),
     ]
     
     static let defaultData: [Tea] =
     [
         Tea(teaName: NSLocalizedString("Sencha", comment: "Name of the tea: Sencha"),
-             temperature: Temperature(celsius: 70.0),
-             brewTimes: [TimePeriod(minutes: 1, seconds: 0), TimePeriod(minutes: 1, seconds: 30), TimePeriod(minutes: 2, seconds: 0)],
-             spoons: TeaSpoon(amount: 1.0),
-             cup: Cup.smallCup,
-             theme: .greenTea
-            ),
+            temperature: Temperature(celsius: 70.0),
+            brewTimes: [TimePeriod(minutes: 1, seconds: 0), TimePeriod(minutes: 1, seconds: 30), TimePeriod(minutes: 2, seconds: 0)],
+            spoons: TeaSpoon(amount: 1.0),
+            cup: Cup.smallCup,
+            theme: .greenTea
+           ),
     ]
 }

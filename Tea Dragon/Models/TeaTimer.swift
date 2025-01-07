@@ -10,7 +10,7 @@ import Foundation
 
 @MainActor
 final class TeaTimer: ObservableObject {
-
+    
     
     @Published private var _timeElapsed = TimePeriod(seconds: 0)
     private weak var timer: Timer?
@@ -78,9 +78,9 @@ final class TeaTimer: ObservableObject {
         timer?.invalidate()
         timerStopped = true
     }
-
+    
     nonisolated private func update() {
-
+        
         Task { @MainActor in
             if forceUpdate {
                 endDate = Date(timeInterval: _timeRemaining.time_interval, since: Date())
@@ -92,9 +92,9 @@ final class TeaTimer: ObservableObject {
             }
             let millisecondsRemaining = Int((endDate.timeIntervalSince1970 - Date().timeIntervalSince1970) * 1000)
             self._timeRemaining = TimePeriod(milliseconds: millisecondsRemaining)
-
-                if (!_timeRemaining.isPositive()) {
-                    timerStopped = true
+            
+            if (!_timeRemaining.isPositive()) {
+                timerStopped = true
                 timerEndedAction?()
             }
         }

@@ -27,7 +27,6 @@ struct TeaEditView: View {
                     }
                     ToolbarItem(placement: .confirmationAction) {
                         Button() {
-                            // TODO: Are there other similar data validations neccesary? Move code to other location?
                             editedBrew.currentBrew = min(editedBrew.currentBrew, editedBrew.brewTimes.count)
                             brew = editedBrew
                             show = false

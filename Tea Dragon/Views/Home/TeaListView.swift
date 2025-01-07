@@ -46,14 +46,14 @@ struct TeaListView: View {
                                     brewStore.brews.remove(at: index)
                                 }
                             } label: {
-                                Label("Delete", systemImage: "trash")
+                                Label("Delete", systemImage: Icon.delete)
                             }
                             
                             Button() {
                                 editedBrewIndex = index
                                 presentEditBrew = true
                             } label: {
-                                Label("Edit", systemImage: "pencil")
+                                Label("Edit", systemImage: Icon.edit)
                             }
                             .tint(.blue)
                         }
@@ -68,25 +68,23 @@ struct TeaListView: View {
             .listRowSpacing(10)
             .navigationTitle("Tea Dragon")
             .toolbar {
-                // Add Edit Button (Lower Right)
-                
-                                // Legal Information Button (Left)
+                // Settings Button (Left)
                 ToolbarItem(placement: .navigationBarLeading) {
-                                    NavigationLink(destination: SettingsView()) {
-                                        Image(systemName: "gearshape")
-                                    }
-                                }
-
-                                // Add Brew Button (Right)
-                                ToolbarItem(placement: .navigationBarTrailing) {
-                                    Button(action: {
-                                        presentAddBrew = true
-                                    }) {
-                                        Image(systemName: "plus")
-                                    }
-                                }
+                    NavigationLink(destination: SettingsView()) {
+                        Image(systemName: "gearshape")
+                    }
+                }
                 
-                            }
+                // Add Tea Button (Right)
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        presentAddBrew = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                }
+                
+            }
             
         }
         .fullScreenCover(isPresented: $presentAddBrew) {

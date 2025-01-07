@@ -24,40 +24,17 @@ struct TeaBrewView: View {
                         .foregroundStyle(brew.theme.mainColor)
                         .cornerRadius(20)
                         .frame(maxWidth: sideLength * 0.7, maxHeight: sideLength * 0.7)
-
+                    
                         .overlay {
                             Image(systemName: Icon.cupWarm)
                                 .font(.system(size: sideLength * 0.5))
                                 .foregroundStyle(brew.theme.accentColor)
                         }
                     Spacer()
-                    // TODO: dont hardcode this
-                    Text(brew.teaName)
-                        .font(.title)
-                        .padding(.bottom, -5)
-                    Text(brew.cup.name)
-                        .foregroundStyle(.secondary)
-                        .font(.footnote)
-                        .padding(.bottom, 5)
-                    HStack {
-                        Label(brew.temperature.formatted(), systemImage: Icon.temperature)
-                            .padding(.horizontal, 5)
-                            .background(Color.gray.opacity(0.3))
-                            .cornerRadius(5)
-                        Label(brew.cup.volume.formatted(), systemImage: Icon.cup)
-                            .padding(.horizontal, 5)
-                            .background(Color.gray.opacity(0.3))
-                            .cornerRadius(5)
-                        Label(brew.spoons.formatted(), systemImage: Icon.spoons)
-                            .padding(.horizontal, 5)
-                            .background(Color.gray.opacity(0.3))
-                            .cornerRadius(5)
-                            
-                        
-                    }
-                    Spacer()
-//                    Spacer()
                     
+                    
+                    TeaInfo(tea: $brew)
+                    Spacer()
                     BrewProgressControllerView(brew: $brew)
                     
                     

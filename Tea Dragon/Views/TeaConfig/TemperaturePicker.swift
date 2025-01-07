@@ -12,7 +12,7 @@ struct TemperaturePicker: View {
     
     var body: some View {
         Picker("", selection: $selection) {
-            ForEach(1...100, id: \.self) { celsius in
+            ForEach(1...120, id: \.self) { celsius in
                 let temperature = Temperature(celsius: Double(celsius))
                 Text(temperature.formatted()).tag(temperature)
             }

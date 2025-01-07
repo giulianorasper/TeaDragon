@@ -4,7 +4,7 @@
 //
 //  Created by Giuliano Rasper on 30.12.24.
 //
- 
+
 import SwiftUI
 
 struct TeaTypePicker: View {

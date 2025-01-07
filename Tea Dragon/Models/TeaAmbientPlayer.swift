@@ -66,7 +66,7 @@ class TeaAmbientPlayer {
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
         let request = UNNotificationRequest(identifier: "tea_done", content: content, trigger: trigger)
         
-       // Push to notification center
+        // Push to notification center
         center.add(request) { error in
             if let error = error {
                 print("Error scheduling notification: \(error)")

@@ -1,5 +1,5 @@
 //
-//  TimePicker.swift
+//  BrewTimePicker.swift
 //  Tea Dragon
 //
 //  Created by Giuliano Rasper on 26.12.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TimerPicker: View {
+struct BrewTimePicker: View {
     let number: Int
     @Binding var selectedTime: TimePeriod
     @State var showPopover: Bool = false
@@ -33,6 +33,5 @@ struct TimerPicker: View {
             
         }
         .padding(1)
-        
     }
 }

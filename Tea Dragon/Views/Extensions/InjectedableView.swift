@@ -11,15 +11,15 @@ import SwiftUI
 struct InjectedView<Content: View>: View {
     @StateObject private var brewStore: TeaStore
     @StateObject private var cupStore: CupStore
-
+    
     let content: Content
-
+    
     init(content: Content, brewStore: TeaStore? = nil, cupStore: CupStore? = nil) {
         _brewStore = StateObject(wrappedValue: brewStore ?? TeaStore())
         _cupStore = StateObject(wrappedValue: cupStore ?? CupStore())
         self.content = content
     }
-
+    
     var body: some View {
         content
             .environmentObject(brewStore)

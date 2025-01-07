@@ -56,7 +56,7 @@ enum TeaType: String, CaseIterable, Identifiable, Codable {
         case .other: return NSLocalizedString("Other", comment: "")
         }
     }
-
+    
     
     var id: String { name }
 }

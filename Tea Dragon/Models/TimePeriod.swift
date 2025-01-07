@@ -33,34 +33,34 @@ struct TimePeriod: Identifiable, Hashable, Codable {
     }
     
     // Getter for minutes
-        var minutes: Int {
-            get {
-                return total_milliseconds / 60000 // 1 minute = 60000 milliseconds
-            }
-            set(newMinutes) {
-                // Calculate the total milliseconds for the new minutes
-                let currentSeconds = (total_milliseconds / 1000) % 60 // Extract the current seconds
-                total_milliseconds = (newMinutes * 60000) + (currentSeconds * 1000)
-            }
+    var minutes: Int {
+        get {
+            return total_milliseconds / 60000 // 1 minute = 60000 milliseconds
         }
-
-        // Getter for seconds
-        var seconds: Int {
-            get {
-                return (total_milliseconds / 1000) % 60 // Extract seconds from total milliseconds
-            }
-            set(newSeconds) {
-                // Validate the newSeconds to ensure it fits within the 0–59 range
-                guard newSeconds >= 0 && newSeconds < 60 else {
-                    print("Seconds must be in the range 0–59.")
-                    return
-                }
-
-                // Calculate the new total milliseconds, preserving minutes
-                let currentMinutes = total_milliseconds / 60000
-                total_milliseconds = (currentMinutes * 60000) + (newSeconds * 1000)
-            }
+        set(newMinutes) {
+            // Calculate the total milliseconds for the new minutes
+            let currentSeconds = (total_milliseconds / 1000) % 60 // Extract the current seconds
+            total_milliseconds = (newMinutes * 60000) + (currentSeconds * 1000)
         }
+    }
+    
+    // Getter for seconds
+    var seconds: Int {
+        get {
+            return (total_milliseconds / 1000) % 60 // Extract seconds from total milliseconds
+        }
+        set(newSeconds) {
+            // Validate the newSeconds to ensure it fits within the 0–59 range
+            guard newSeconds >= 0 && newSeconds < 60 else {
+                print("Seconds must be in the range 0–59.")
+                return
+            }
+            
+            // Calculate the new total milliseconds, preserving minutes
+            let currentMinutes = total_milliseconds / 60000
+            total_milliseconds = (currentMinutes * 60000) + (newSeconds * 1000)
+        }
+    }
     
     
     init(id: UUID = UUID(), minutes: Int, seconds: Int) {
@@ -83,7 +83,7 @@ struct TimePeriod: Identifiable, Hashable, Codable {
         hasher.combine(seconds)
     }
     
-
+    
     func formatTime() -> String {
         String(format: "%02d:%02d", minutes, seconds)
     }

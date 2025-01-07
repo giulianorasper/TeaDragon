@@ -19,7 +19,8 @@ enum Icon {
     
     // functionalities
     static let append = "plus.circle.fill"
+    static let delete = "trash"
+    static let edit = "pencil"
     static let selectChevron = "chevron.up.chevron.down"
-    
 }
 

@@ -24,12 +24,12 @@ struct TeaDetailView: View {
                     HStack {
                         Label("Tea Type", systemImage: Icon.teaType)
                         TeaTypePicker(selection: $brew.theme)
-    
+                        
                     }
                     HStack {
                         Label("Temperature", systemImage: Icon.temperature)
                         TemperaturePicker(selection: $brew.temperature)
-                                        .keyboardType(.numberPad)
+                            .keyboardType(.numberPad)
                     }
                     HStack {
                         Label("Cup", systemImage: Icon.cup)
@@ -45,17 +45,17 @@ struct TeaDetailView: View {
                 
                 Section(header: Text("Infusion Times")) {
                     ForEach(Array(brew.brewTimes.enumerated()), id: \.0) { index, time in
-                        TimerPicker(number: index + 1, selectedTime: $brew.brewTimes[index])
+                        BrewTimePicker(number: index + 1, selectedTime: $brew.brewTimes[index])
                     }
-                            .onDelete { indices in
-                                brew.brewTimes.remove(atOffsets: indices)
-                            }
-                            .deleteDisabled(brew.brewTimes.count <= 1)
+                    .onDelete { indices in
+                        brew.brewTimes.remove(atOffsets: indices)
+                    }
+                    .deleteDisabled(brew.brewTimes.count <= 1)
                     HStack(alignment: .center) {
                         Button(action: {
                             brew.brewTimes.append(brew.brewTimes[brew.brewAmount - 1]  + TimePeriod(minutes: 0, seconds: 30))
                         }) {
-                            Image(systemName: Icon.append)  
+                            Image(systemName: Icon.append)
                         }
                     }
                     .frame(maxWidth: .infinity)

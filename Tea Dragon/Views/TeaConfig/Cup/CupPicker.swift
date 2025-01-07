@@ -15,13 +15,8 @@ struct CupPicker: View {
     
     var body: some View {
         let isAutomaticCup = Cup.automaticCup == selection
-        let linearGradient = LinearGradient(
-            colors: [.red, .orange, .yellow, .green, .blue, .indigo, .purple],
-            startPoint: .leading,
-            endPoint: .trailing
-        )
-        let style = isAutomaticCup ? AnyShapeStyle(linearGradient) : AnyShapeStyle(.accent)
-    
+        let style = isAutomaticCup ? AnyShapeStyle(LinearGradient.magic) : AnyShapeStyle(.accent)
+        
         HStack {
             Menu(selection.info) {
                 if allowAutomaticSelection {
@@ -29,7 +24,7 @@ struct CupPicker: View {
                         selection = Cup.automaticCup
                     }
                 }
-        
+                
                 ForEach(cupStore.cups) { cup in
                     Button(cup.info) {
                         selection = cup
@@ -37,11 +32,11 @@ struct CupPicker: View {
                     
                 }
                 Button(action: { showAddCupDialog.toggle() }) {
-                    Label("Cup Shelf", systemImage: "pencil")
+                    Label("Cup Shelf", systemImage: Icon.edit)
                 }
             }
             .foregroundStyle(style)
-                
+            
             Image(systemName: Icon.selectChevron)
                 .foregroundStyle(Color.accentColor)
                 .font(.footnote)
