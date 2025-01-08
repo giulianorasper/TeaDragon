@@ -34,7 +34,7 @@ struct PlaybackControllerView<TitleContent: View, SubtitleContent: View>: View {
             .padding(.horizontal)
             
             // Playback controls
-            PlaybackControls(hasPrevious: hasPrevious, hasNext: hasPrevious, isPlaying: isPlaying, previousAction: previousAction, playAction: playAction, pauseAction: pauseAction, nextAction: nextAction)
+            PlaybackControls(hasPrevious: hasPrevious, hasNext: hasNext, isPlaying: isPlaying, previousAction: previousAction, playAction: playAction, pauseAction: pauseAction, nextAction: nextAction)
             
             ProgressBar(currentTime: $currentTime, totalTime: totalTime)
             
