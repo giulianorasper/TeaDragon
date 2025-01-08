@@ -10,7 +10,7 @@ import SwiftUI
 struct TeaListView: View {
     @EnvironmentObject var brewStore: DataStore
     @State var presentAddBrew: Bool = false
-    @State var editedBrewIndex: Int = 0
+//    @State var editedBrewId: UUID? = UUID()
     @State var presentEditBrew: Bool = false
     @State var timedBrew: Tea = Tea()
     @State var presentTimedBrew: Bool = false
@@ -21,6 +21,8 @@ struct TeaListView: View {
     var saveAction: (()->Void)?
     
     var body: some View {
+        // TODO: check how dataflow works in this case and why this does not work when editedBrewID is a state
+        var editedBrewId: UUID? = UUID()
         NavigationStack {
             List{
                 Section("cup to show intructions for") {
@@ -31,7 +33,7 @@ struct TeaListView: View {
                     }
                 }
                 Section("Teas") {
-                    ForEach(Array($brewStore.brews.enumerated()), id: \.element.id) { index, $brew in
+                    ForEach($brewStore.brews, id: \.id) { $brew in
                         Button(action: {
                             timedBrew = brew
                             presentTimedBrew = true
@@ -50,19 +52,22 @@ struct TeaListView: View {
                             }
                             
                             Button() {
-                                editedBrewIndex = index
+                                editedBrewId = brew.id
+                                print("update")
+                                print(editedBrewId?.uuidString)
                                 presentEditBrew = true
                             } label: {
-                                Label("Edit", systemImage: Icon.edit)
+//                                Label("Edit", systemImage: Icon.edit)
+                                Text(brew.id.uuidString)
                             }
                             .tint(.blue)
                         }
-                        
                     }
                     .onDelete { indices in
                         brewStore.brews.remove(atOffsets: indices)
                     }
                 }
+                
             }
             .listStyle(.automatic)
             .listRowSpacing(10)
@@ -91,8 +96,14 @@ struct TeaListView: View {
             TeaAddView(show: $presentAddBrew)
         }
         .fullScreenCover(isPresented: $presentEditBrew) {
-            NavigationStack {
-                TeaEditView(show: $presentEditBrew, brew: $brewStore.brews[editedBrewIndex])
+            if let id = editedBrewId {
+                let brewIndex: Int = brewStore.brews.firstIndex(where: { $0.id == id }) ?? 0
+                NavigationStack {
+                    TeaEditView(show: $presentEditBrew, brew: $brewStore.brews[brewIndex])
+                }
+                .onAppear {
+                    print(id.uuidString)
+                }
             }
         }
         .fullScreenCover(isPresented: $presentTimedBrew) {
