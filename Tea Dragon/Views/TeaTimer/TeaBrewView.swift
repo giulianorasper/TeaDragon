@@ -8,10 +8,10 @@ import SwiftUI
 import AVFoundation
 
 struct TeaBrewView: View {
-    @Binding var show: Bool
     @Binding var brew: Tea
     @State private var isBrewDone: Bool = false
     @EnvironmentObject var dataStore: DataStore
+    @Environment(\.dismiss) private var dismiss
     
     
     var body: some View {
@@ -43,8 +43,7 @@ struct TeaBrewView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
-                            
-                            show = false
+                            dismiss()
                         }) {
                             if isBrewDone {
                                 Image(systemName: "chevron.left")
@@ -76,5 +75,5 @@ struct TeaBrewView: View {
 
 #Preview {
     @Previewable @State var brew: Tea = Tea.sampleData[0]
-    TeaBrewView(show: .constant(true), brew: $brew)
+    TeaBrewView(brew: $brew)
 }

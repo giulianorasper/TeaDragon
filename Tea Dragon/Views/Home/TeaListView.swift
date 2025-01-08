@@ -10,7 +10,7 @@ import SwiftUI
 struct TeaListView: View {
     @EnvironmentObject var brewStore: DataStore
     @State var presentAddBrew: Bool = false
-//    @State var editedBrewId: UUID? = UUID()
+    @State var editedTea: Tea? = nil
     @State var presentEditBrew: Bool = false
     @State var timedBrew: Tea = Tea()
     @State var presentTimedBrew: Bool = false
@@ -21,8 +21,6 @@ struct TeaListView: View {
     var saveAction: (()->Void)?
     
     var body: some View {
-        // TODO: check how dataflow works in this case and why this does not work when editedBrewID is a state
-        var editedBrewId: UUID? = UUID()
         NavigationStack {
             List{
                 Section("cup to show intructions for") {
@@ -44,21 +42,16 @@ struct TeaListView: View {
                         .listRowBackground(brew.theme.mainColor)
                         .swipeActions {
                             Button(role: .destructive) {
-                                if let index = brewStore.brews.firstIndex(where: { $0.id == brew.id }) {
-                                    brewStore.brews.remove(at: index)
-                                }
+                                brewStore.removeTea(brew)
                             } label: {
                                 Label("Delete", systemImage: Icon.delete)
                             }
                             
                             Button() {
-                                editedBrewId = brew.id
-                                print("update")
-                                print(editedBrewId?.uuidString)
+                                editedTea = brew
                                 presentEditBrew = true
                             } label: {
                                 Label("Edit", systemImage: Icon.edit)
-//                                Text(brew.id.uuidString)
                             }
                             .tint(.blue)
                         }
@@ -93,21 +86,13 @@ struct TeaListView: View {
             
         }
         .fullScreenCover(isPresented: $presentAddBrew) {
-            TeaAddView(show: $presentAddBrew)
+            TeaAddView()
         }
-        .fullScreenCover(isPresented: $presentEditBrew) {
-            if let id = editedBrewId {
-                let brewIndex: Int = brewStore.brews.firstIndex(where: { $0.id == id }) ?? 0
-                NavigationStack {
-                    TeaEditView(show: $presentEditBrew, brew: $brewStore.brews[brewIndex])
-                }
-                .onAppear {
-                    print(id.uuidString)
-                }
-            }
-        }
+        .fullScreenCover(item: $editedTea, content: { tea in
+            TeaEditView(tea: tea)
+        })
         .fullScreenCover(isPresented: $presentTimedBrew) {
-            TeaBrewView(show: $presentTimedBrew, brew: $timedBrew)
+            TeaBrewView(brew: $timedBrew)
         }
         .fullScreenCover(isPresented: $showLegalInfo) {
             PrivacyPolicyView()

@@ -38,6 +38,18 @@ class DataStore: Observable, ObservableObject {
         }
     }
     
+    func updateTea(_ tea: Tea) {
+        if let index = brews.firstIndex(where: { $0.id == tea.id }) {
+            brews[index] = tea
+        }
+    }
+    
+    func removeTea(_ tea: Tea) {
+        if let index = brews.firstIndex(where: { $0.id == tea.id }) {
+            brews.remove(at: index)
+        }
+    }
+    
     func loadColoredBrews() {
         self.brews.removeAll()
         for theme in TeaType.allCases {

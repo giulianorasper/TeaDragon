@@ -8,10 +8,10 @@ import SwiftUI
 
 struct TeaAddView: View {
     
-    @Binding var show: Bool
     @EnvironmentObject var cupStore: DataStore
     @State var brew: Tea = Tea()
     @EnvironmentObject var brewStore: DataStore
+    @Environment(\.dismiss) private var dismiss
     
     
     var body: some View {
@@ -20,13 +20,13 @@ struct TeaAddView: View {
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button("Cancel") {
-                            show = false
+                            dismiss()
                         }
                     }
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Add") {
                             brewStore.brews.append(brew)
-                            show = false
+                            dismiss()
                         }
                         .disabled(!brew.isValid)
                     }
