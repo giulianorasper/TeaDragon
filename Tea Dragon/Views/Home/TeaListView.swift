@@ -57,8 +57,8 @@ struct TeaListView: View {
                                 print(editedBrewId?.uuidString)
                                 presentEditBrew = true
                             } label: {
-//                                Label("Edit", systemImage: Icon.edit)
-                                Text(brew.id.uuidString)
+                                Label("Edit", systemImage: Icon.edit)
+//                                Text(brew.id.uuidString)
                             }
                             .tint(.blue)
                         }
