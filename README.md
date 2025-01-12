@@ -4,8 +4,7 @@
 
 ティードラゴンで、完璧な一杯をお楽しみください！
 
-## [ベータテスターとして参加する](https://testflight.apple.com/join/uDRk1UK8)
-ベータテストにまだ参加できない場合、最初のビルドが現在承認中です。申し訳ございません。
+## [App Storeからダウンロード](https://apps.apple.com/us/app/tea-dragon/id6740205907)
 
 ---
 
