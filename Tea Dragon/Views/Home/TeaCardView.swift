@@ -15,9 +15,7 @@ struct TeaCardView : View {
                     .font(.title)
                 Label("\(brew.temperature.formatted())", systemImage: Icon.temperature)
                 Label("\(brew.brewTimes.count) steeps", systemImage: Icon.brewAmount)
-                withAnimation {
-                    Label("\(usedCup.info)", systemImage: Icon.cup)
-                }
+                Label("\(usedCup.info)", systemImage: Icon.cup)
                 Label("\(neccesarySpoons.formatted())", systemImage: Icon.spoons)
             }
         }

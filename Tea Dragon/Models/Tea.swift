@@ -1,28 +1,28 @@
 import Foundation
 
 struct Tea: Identifiable, Codable {
-    private let _id: UUID
-    private var _teaName: String
-    private var _temperature: Temperature
-    private var _brewTimes: [TimePeriod]
-    private var _spoons: TeaSpoon
-    private var _cup: Cup
-    private var _currentBrew: Int
-    private var _theme: TeaType
+    let id: UUID
+    var teaName: String
+    var temperature: Temperature
+    var brewTimes: [TimePeriod]
+    var spoons: TeaSpoon
+    var cup: Cup
+    var currentBrew: Int
+    var theme: TeaType
     
     var brewAmount: Int {
         brewTimes.count
     }
     
     init(id: UUID = UUID(), teaName: String = "", temperature: Temperature = Temperature(celsius: 70.0), brewTimes: [TimePeriod] = [TimePeriod(minutes: 2, seconds: 0)], spoons: TeaSpoon = TeaSpoon(amount: 1), cup: Cup = Cup.smallCup, theme: TeaType = .greenTea) {
-        self._id = id
-        self._teaName = teaName
-        self._temperature = temperature
-        self._brewTimes = brewTimes
-        self._spoons = spoons
-        self._cup = cup
-        self._theme = theme
-        self._currentBrew = 1
+        self.id = id
+        self.teaName = teaName
+        self.temperature = temperature
+        self.brewTimes = brewTimes
+        self.spoons = spoons
+        self.cup = cup
+        self.theme = theme
+        self.currentBrew = 1
     }
     
     var isDone: Bool {
@@ -39,76 +39,6 @@ struct Tea: Identifiable, Codable {
     
     var hasNextBrew: Bool {
         currentBrew < brewTimes.count
-    }
-    
-    
-    var id: UUID {
-        get {
-            return _id
-        }
-    }
-    
-    var teaName: String {
-        get {
-            return _teaName
-        }
-        set {
-            _teaName = newValue
-        }
-    }
-    
-    var temperature: Temperature {
-        get {
-            return _temperature
-        }
-        set {
-            _temperature = newValue
-        }
-    }
-    
-    var brewTimes: [TimePeriod] {
-        get {
-            return _brewTimes
-        }
-        set {
-            _brewTimes = newValue
-        }
-    }
-    
-    var spoons: TeaSpoon {
-        get {
-            return _spoons
-        }
-        set {
-            _spoons = newValue
-        }
-    }
-    
-    var cup: Cup {
-        get {
-            return _cup
-        }
-        set {
-            _cup = newValue
-        }
-    }
-    
-    var currentBrew: Int {
-        get {
-            return _currentBrew
-        }
-        set {
-            _currentBrew = newValue
-        }
-    }
-    
-    var theme: TeaType {
-        get {
-            return _theme
-        }
-        set {
-            _theme = newValue
-        }
     }
 }
 

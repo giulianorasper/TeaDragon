@@ -104,9 +104,6 @@ struct TimePeriod: Identifiable, Hashable, Codable {
     }
     
     func isPositive() -> Bool {
-        if total_milliseconds > 0 {
-            return true
-        }
-        return false
+        return total_milliseconds > 0
     }
 }

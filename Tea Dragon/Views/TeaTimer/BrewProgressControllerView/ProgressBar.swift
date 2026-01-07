@@ -11,17 +11,15 @@ struct ProgressBar: View {
     @Binding var currentTime: TimePeriod
     let totalTime: TimePeriod
     
+    private var progress: Double {
+        return Double(currentTime.total_milliseconds) / Double(totalTime.total_milliseconds)
+    }
+    
+    private func updateProgress(_ newProgress: Double) {
+        currentTime.total_milliseconds = Int(newProgress * Double(totalTime.total_milliseconds))
+    }
+    
     var body: some View {
-        var progress: Double {
-            get {
-                return Double(currentTime.total_milliseconds) / Double(totalTime.total_milliseconds)
-            }
-            set {
-                currentTime.total_milliseconds = Int(newValue * Double(totalTime.total_milliseconds))
-            }
-        }
-        
-        
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
                 // Background track
@@ -41,7 +39,8 @@ struct ProgressBar: View {
                     .onChanged { value in
                         isInteracting = true
                         let location = value.location.x / geometry.size.width
-                        progress = max(0, min(1, Double(location))) // Clamp between 0 and 1
+                        let newProgress = max(0, min(1, Double(location))) // Clamp between 0 and 1
+                        updateProgress(newProgress)
                     }
                     .onEnded { _ in
                         isInteracting = false

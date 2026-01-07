@@ -7,15 +7,10 @@
 import Foundation
 
 struct TeaSpoon: Hashable, Codable {
-    private var _amount: Double
-    
-    var amount: Double {
-        get { _amount }
-        set { _amount = newValue }
-    }
+    var amount: Double
     
     init(amount: Double) {
-        self._amount = amount
+        self.amount = amount
     }
     
     
