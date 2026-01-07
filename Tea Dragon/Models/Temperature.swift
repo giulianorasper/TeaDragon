@@ -6,15 +6,10 @@
 //
 
 struct Temperature: Hashable, Codable {
-    private var _celsius: Double
-    
-    var celsius: Double {
-        get { _celsius }
-        set { _celsius = newValue }
-    }
+    var celsius: Double
     
     init(celsius: Double) {
-        self._celsius = celsius
+        self.celsius = celsius
     }
     
     var text: String {

@@ -25,7 +25,6 @@ final class TeaTimer: ObservableObject {
     }
     private var frequency: TimeInterval { 1.0 / 10.0 } // 10Hz is sufficient for a seconds-based timer
     @Published var totalTime = TimePeriod(seconds: 0) // should not be changeable from outside?
-    @Published var aaa = TimePeriod(seconds: 0)
     private var forceUpdate: Bool = false
     private var endDate: Date?
     private var _timeRemaining: TimePeriod {
